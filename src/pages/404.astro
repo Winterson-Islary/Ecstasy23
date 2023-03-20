@@ -1,30 +1,17 @@
 ---
-import NonHomeLayout from "../layouts/NonHomeLayout.astro";
+import NonHomeLayout from "../layouts/Layout.astro";
 ---
 
 <NonHomeLayout>
-   <div id="background-img" class="-z-30"></div>
-  <div
-    id="wrapper"
-    class="w-full mx-auto md:max-w-[1300px] mt-16 md:mt-[5em] px-2 md:px-10">
-    <h1 class="text-5xl font-playfair text-center text-white py-20">404: Page Not Found.</h1>
+  <div id="background-img" class="-z-30"></div>
+  <div id="wrapper" class="w-full mx-auto md:max-w-[1300px] px-2 md:px-10">
+    <h1
+      class="h-[50vh] mt-[3em] text-7xl font-poppins text-center text-black uppercase"
+    >
+      404: Page Not Found.
+    </h1>
     <main></main>
   </div>
 
-  <style>
-    #background-img {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      height: 100vh;
-      width: 100%;
-      background-image: url("/assets/space3.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      object-fit: cover;
-      background-position: center;
-      filter: grayscale(30%);
-      filter: brightness(80%);
-    }
-  </style>
+  <style></style>
 </NonHomeLayout>

@@ -63,15 +63,15 @@ import Members from "../components/Members.astro";
       id="flower"
       src="/assets/image1.webp"
       alt="flower"
-      class="h-[30.5em] absolute -right-[15em] -top-2 -z-30"
+      class="h-[30.5em] absolute -right-[15em] lg:-right-[10em] -top-2 -z-30"
     />
     <img
       id="flower"
       src="/assets/image1.webp"
       alt="flower"
-      class="h-[30.5em] absolute -z-30 -left-[15em] -top-2"
+      class="h-[30.5em] absolute -z-30 -left-[15em] lg:-left-[10em] -top-2"
     />
-    <div id="explore-mobile-header" class="pt-5">
+    <div id="explore-mobile-header" class="pt-5 lg:pt-0">
       <h1
         class="font-playfair text-center lg:hidden text-black font-light text-6xl z-20"
       >
@@ -83,24 +83,26 @@ import Members from "../components/Members.astro";
       class="px-2 md:px-5 h-[50vh] mx-auto flex flex-col justify-center gap-[2em] items-center"
     >
       <section class="self-center hidden lg:flex lg:flex-col z-30">
-        <h1 class="font-playfair text-black font-light text-7xl self-center">
+        <h1
+          class="font-playfair text-black font-light text-8xl self-center pb-2"
+        >
           EXPLORE!!
         </h1>
-        <p class="text-2xl font-light font-poppins self-center">
-          PARTICIPATE IN VARIOUS
+        <p class="text-3xl font-light font-poppins self-center">
+          PARTICIPATE IN EXCITING
         </p>
-        <p class="text-xl font-light font-poppins pb-2 self-center">
+        <p class="text-2xl font-light font-poppins pb-5 self-center">
           CONTESTS AND EVENTS.
         </p>
         <a
           href="./about"
           class="bg-red-300 shadow-black shadow-sm hover:shadow-sm border-black border-2 transition-shadow px-10 py-1 font-black font-playfair rounded-full text-2xl self-center"
-          >INFO.</a
+          >Learn More.</a
         >
       </section>
       <section
         id="right-col"
-        class="flex grow-0 flex-col justify-center lg:grid lg:grid-cols-3 gap-[0.3em] lg:gap-1 lg:border-black lg:border-4 rounded-lg p-1 w-full sm:w-[65%]"
+        class="flex grow-0 flex-col justify-center lg:hidden gap-[0.3em] lg:gap-1 lg:border-black lg:border-4 rounded-lg p-1 w-full sm:w-[65%]"
       >
         <div
           class="link-card card1 items-end font-poppins text-[0.9rem] rounded-md sm:rounded-none"
@@ -150,7 +152,7 @@ import Members from "../components/Members.astro";
     </h1>
     <section
       id="merch-div"
-      class="hidden sm:flex flex-wrap justify-center items-center gap-2"
+      class="hidden sm:flex flex-wrap justify-center items-center gap-2 select-none"
     >
       <img
         src="/assets/merch/shirt1.webp"
@@ -191,21 +193,21 @@ import Members from "../components/Members.astro";
   <!--QUOTE -->
   <div
     id="quote"
-    class="z-20 min-h-[15em] mx-auto p-5 md:p-10 select-none pointer-events-none mb-[5em]"
+    class="z-20 min-h-[15em] mx-auto p-5 md:p-10 select-none pointer-events-none mb-[1em]"
   >
     <h2
       class="text-gray-800 mb-4 text-center pt-10 pb-10 font-poppins text-4xl font-light"
     >
-      MESSAGE FROM DIRECTOR
+      MESSAGE FROM THE DIRECTOR
     </h2>
     <section
-      class="flex flex-col md:flex-row justify-center gap-10 items-center"
+      class="flex flex-col md:flex-row justify-center gap-5 md:gap-10 items-center"
     >
       <section id="left-body" class="">
         <img
           src="/assets/board/director-image.webp"
-          alt="organizer's image"
-          class="rounded-full md:rounded-full w-[10em] md:w-[13em] pointer-events-none border-2 border-white"
+          alt="Directors's image"
+          class="rounded-full md:rounded-sm w-[10em] md:w-[10em] pointer-events-none border-2 border-slate-200 p-1"
         />
       </section>
       <section id="right-body" class="w-full lg:w-[50em]">
@@ -228,6 +230,68 @@ import Members from "../components/Members.astro";
             <cite
               >- Prof. Hemanta Kumar Kalita
               <p class="text-gray-500">Director (i/c), CIT Kokrajhar</p>
+            </cite>
+          </blockquote>
+        </p>
+      </section>
+    </section>
+  </div>
+  <!--END -->
+  <!--MESSAGE BY CHAIRPERSON -->
+  <div
+    id="quote"
+    class="z-20 min-h-[15em] mx-auto p-5 md:p-10 select-none pointer-events-none mb-10"
+  >
+    <h2
+      class="text-gray-800 mb-4 text-center pb-10 font-poppins text-4xl font-light"
+    >
+      MESSAGE FROM THE CHAIRPERSON
+    </h2>
+    <section
+      class="flex flex-col md:flex-row justify-center gap-10 items-center"
+    >
+      <section id="left-body" class="">
+        <img
+          src="/assets/board/anon.webp"
+          alt="organizer's image"
+          class="rounded-full md:rounded-sm w-[10em] md:w-[10em] pointer-events-none border-2 border-slate-200 p-1"
+        />
+      </section>
+      <section id="right-body" class="w-full lg:w-[50em]">
+        <p class="font-playfair italic font-light text-[1.2rem]">
+          <blockquote
+            class="text-black text-[1rem] italic border-l-4 pl-4 border-gray-300"
+          >
+            <p class="mb-4">
+              "Greetings! It is with great pleasure that I welcome you all to
+              Ecstasy 2023, our annual sports and cultural event that brings
+              together the best of our talent, creativity, and sportsmanship.
+              This is an occasion that we all eagerly look forward to every
+              year, and I am thrilled to see the enthusiasm and energy that each
+              and every one of you brings to this event. Ecstasy 2023 is not
+              just a platform for showcasing our skills and abilities, but it is
+              also a celebration of our diversity and unity. As we come together
+              to participate in various sports and cultural events, we break
+              down barriers and forge new connections with each other. We learn
+              from one another, we challenge ourselves and each other, and we
+              emerge stronger and more united than before. I am inspired by the
+              dedication and hard work that our students, faculty, and staff
+              have put into preparing for this event. You have demonstrated that
+              with passion and determination, anything is possible. Whether it
+              is on the sports field, on the stage, or behind the scenes, you
+              have shown that you have what it takes to excel and make a
+              difference. So let us embrace this opportunity to showcase our
+              talents, support one another, and have fun. Let us celebrate our
+              diversity and unity, and let us make Ecstasy 2023 a memorable
+              event that we will cherish for years to come. I wish you all the
+              best of luck, and I look forward to seeing all of you shine at
+              Ecstasy 2023!" <br /><br />Sincerely,
+            </p>
+            <cite
+              >Debarshi Kumar Brahma
+              <p class="text-gray-500">
+                Chairperson, Organizing Committee, <br />Ecstasy 2023
+              </p>
             </cite>
           </blockquote>
         </p>
@@ -343,7 +407,7 @@ import Members from "../components/Members.astro";
     object-fit: contain;
     background-color: white;
     border: 2px solid black;
-    /* border-radius: 0.6rem; */
+    border-radius: 0.3rem;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     transition: background-size 0.2s ease-in-out;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -358,7 +422,7 @@ import Members from "../components/Members.astro";
     border-radius: 0.35rem;
     color: #111;
     background-color: white;
-    opacity: 0.95;
+    opacity: 0.8;
   }
   .link-card > h2 {
     margin: 0;
@@ -397,5 +461,6 @@ import Members from "../components/Members.astro";
   #flower {
     /*NOT SUPPORTED BY FIREFOX */
     -webkit-box-reflect: below;
+    filter: grayscale(0%);
   }
 </style>
