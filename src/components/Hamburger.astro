@@ -1,0 +1,92 @@
+---
+---
+
+<div id="container" class="relative z-20">
+  <button
+    id="hamburger-container"
+    class="md:hidden border-2 border-black rounded-md py-1"
+    aria-controls="primary-navigation"
+    aria-expanded="false"
+  >
+    <svg class="hamburger" viewBox="0 0 100 100" width="40" height="30">
+      <rect
+        class="line top fill-black"
+        width="80"
+        height="12"
+        x="10"
+        y="25"
+        rx="5"></rect>
+      <rect
+        class="line middle fill-black"
+        width="80"
+        height="12"
+        x="10"
+        y="45"
+        rx="5"></rect>
+      <rect
+        class="line bottom fill-black"
+        width="80"
+        height="12"
+        x="10"
+        y="65"
+        rx="5"></rect>
+    </svg>
+  </button>
+
+  <nav
+    id="navbar"
+    class="nav-active md:hidden absolute -left-[8rem] top-[3rem] bg-[#1e2132] py-5 px-9 rounded-md"
+  >
+    <ul
+      class="flex flex-col gap-2 font-poppins text-white font-black text-[1.2rem]"
+    >
+      <li><a href="./events">EVENTS</a></li>
+      <li><a href="./contests">CONTESTS</a></li>
+      <li><a href="./sports">SPORTS</a></li>
+      <li><a href="./about">ABOUT</a></li>
+      <li><a href="./contact">CONTACT</a></li>
+    </ul>
+  </nav>
+</div>
+<script>
+  const nav = document.querySelector("#navbar");
+  const hamburger = document.querySelector("#hamburger-container");
+  hamburger.addEventListener("click", () => {
+    const isOpened = hamburger.getAttribute("aria-expanded");
+    if (isOpened === "false") {
+      hamburger.setAttribute("aria-expanded", "true");
+      nav.classList.remove("nav-active");
+    } else {
+      hamburger.setAttribute("aria-expanded", "false");
+      nav.classList.add("nav-active");
+    }
+  });
+</script>
+
+<style>
+  #hamburger-container .line {
+    transiton: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+    transform-origin: center;
+  }
+
+  #hamburger-container .line {
+    transiton: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  }
+
+  #hamburger-container[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+  }
+  #hamburger-container[aria-expanded="true"] .top {
+    rotate: 45deg;
+  }
+  #hamburger-container[aria-expanded="true"] .middle {
+    opacity: 0;
+  }
+  #hamburger-container[aria-expanded="true"] .bottom {
+    rotate: -45deg;
+  }
+
+  .nav-active {
+    display: none;
+  }
+</style>

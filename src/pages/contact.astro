@@ -1,0 +1,127 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div id="background-img" class="-z-30"></div>
+  <div
+    id="wrapper"
+    class="w-full mx-auto md:max-w-[1300px] mt-16 md:mt-[5em] px-2 md:px-10"
+  >
+    <h1
+      class="text-5xl font-poppins font-black text-center text-black pb-1 pt-20"
+    >
+      Contact Us.
+    </h1>
+    <p class="text-2xl font-serif text-center text-black pb-10">
+      If you have any queries, feel free to write to us.
+    </p>
+
+    <main>
+      <div
+        class="rounded-lg max-w-7xl mx-auto sm:px-6 lg:px-8 py-6 flex justify-center mb-4"
+      >
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xwkjbobw"
+          method="POST"
+          class="border w-full md:w-9/12 px-5 pb-10 rounded-lg flex flex-col shadow-sm shadow-black"
+        >
+          <h1
+            class="text-3xl font-poppins text-center py-10 font-black text-black"
+          >
+            Leave us a Message!
+          </h1>
+          <div class="mb-4">
+            <label for="name" class="sr-only">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+              class="bg-[#4f5c88] w-full py-2 px-4 rounded-md border-[#0f172a] focus:ring-offset-2 focus:outline-none focus:ring-1 focus:ring-[#4f5c88] focus:border-transparent text-white shadow-black shadow-md"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="sr-only">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+              class="bg-[#4f5c88] w-full py-2 px-4 rounded-md border-gray-300 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-[#4f5c88] focus:border-transparent text-white shadow-black shadow-md"
+            />
+          </div>
+
+          <!-- Message Box -->
+          <div class="mb-4">
+            <label for="message" class="sr-only">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Message - Limit Less Than 500 Words"
+              required
+              maxlength="1000"
+              class="bg-[#4f5c88] w-full py-2 px-4 rounded-md border-gray-300 focus:ring-offset-2 focus:outline-none focus:ring-2 focus:ring-[#4f5c88] focus:border-transparent text-white resize-none shadow-md shadow-black"
+            ></textarea>
+            <span id="message-counter" class="text-sm text-gray-400"></span>
+            <span id="message-error" class="text-sm text-red-500 hidden"
+              >Message exceeds 1000 words.</span
+            >
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-right self-center pt-5">
+            <button
+              type="submit"
+              class="flex justify-center items-center bg-[#191919] text-white hover:bg-[#373434] hover:text-slate-200 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-all duration-300 ease-in-out shadow-black shadow-md"
+              >Submit</button
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</Layout>
+
+<!-- Error Message Script -->
+<script>
+  const messageTextarea = document.getElementById(
+    "message"
+  ) as HTMLTextAreaElement;
+  const messageCounter = document.getElementById("message-counter");
+  const messageError = document.getElementById("message-error");
+
+  messageTextarea.addEventListener("input", function () {
+    const messageLength = messageTextarea.value.split(" ").length;
+    messageCounter.textContent = `${messageLength} words`;
+    if (messageLength > 1000) {
+      messageError.classList.remove("hidden");
+    } else {
+      messageError.classList.add("hidden");
+    }
+  });
+</script>
+
+<!-- Css -->
+<style>
+  #background-img {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    /* background-image: url("/assets/space3.jpg"); */
+    /* background-color: #2d3563; */
+    /* background-color: #1d2241; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    filter: grayscale(30%);
+    filter: brightness(80%);
+  }
+</style>

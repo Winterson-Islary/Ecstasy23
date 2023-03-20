@@ -1,0 +1,59 @@
+---
+
+---
+<div id="sponsor-container" class="">
+	<div class="swiper">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide flex justify-center">
+			<img src="/assets/merch/shirt1.webp" alt="T-Shirt" class="h-[15em] rounded-md">
+		</div>
+		<div class="swiper-slide flex justify-center">
+			<img src="/assets/merch/shirt2.webp" alt="T-Shirt" class="h-[15em] rounded-md">
+		</div>
+		<div class="swiper-slide flex justify-center">
+      	<img src="/assets/merch/shirt3.webp" alt="T-Shirt" class="h-[15em] rounded-md">
+		</div>
+	</div>
+	</div>
+</div>
+
+
+<!--SWIPERjs-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+<!--SWIPERjs Script -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>
+	const swiper = new Swiper('.swiper', {
+		// Optional parameters
+		direction: 'horizontal',
+		loop: true,
+		slidesPerView: "auto",
+		spaceBetween: 15,
+		speed: 3000,
+		autoplay: {
+		delay: 500,
+		disableOnInteraction: false,
+
+ 		},
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+
+<style>
+</style>

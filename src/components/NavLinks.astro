@@ -1,0 +1,39 @@
+---
+---
+
+<nav class="hidden md:block">
+  <ul class="md:flex gap-16 font-poppins text-black font-black text-[1.1rem]">
+    <li><a id="navLink" href="./events">EVENTS</a></li>
+    <li><a id="navLink" href="./contests">CONTESTS</a></li>
+    <li><a id="navLink" href="./sports">SPORTS</a></li>
+    <li><a id="navLink" href="./contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<script></script>
+
+<style>
+  nav ul li a {
+    position: relative;
+  }
+  nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    border-bottom: 3px solid white;
+    bottom: -6px;
+  }
+  nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 3px solid rgb(122, 122, 122);
+    bottom: -6px;
+    transition: width 0.3s;
+  }
+  nav ul li a:hover:before {
+    width: 50%;
+  }
+</style>

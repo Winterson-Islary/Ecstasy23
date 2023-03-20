@@ -1,0 +1,77 @@
+---
+export interface Props {
+  contestNo: string;
+  title: string;
+  date: string;
+  venue: string;
+  time?: string;
+  coordinators?: string[];
+  regLink?: string;
+}
+
+const {
+  contestNo,
+  title,
+  date,
+  venue,
+  time,
+  coordinators,
+  regLink = null,
+} = Astro.props;
+---
+
+<section
+  id={contestNo}
+  class="flex flex-col font-poppins border-black border-t-2 border-b-2 px-3 py-2 text-black overflow-x-hidden w-full"
+>
+  <p class="text-center pb-2"><strong>CONTEST {contestNo}</strong></p>
+  <div id="top">
+    <h1 id="title" title={title} class="truncate">
+      <span class="text-slate-900">Title:</span>
+      <span class="font-black">{title}</span>
+    </h1>
+    <p id="date"><span class="text-slate-900">Date:</span> {date}</p>
+    <p id="time"><span class="text-slate-900">Time:</span> {time}</p>
+    <p id="venue"><span class="text-slate-900">Venue:</span> {venue}</p>
+  </div>
+  <div id="coord-container" class="top-20">
+    <details class="z-30 relative">
+      <summary class="cursor-pointer select-none">View Coordinators</summary>
+      <ul class="flex flex-col ml-7">
+        {
+          coordinators.map((member) => {
+            return <li class="">{member}</li>;
+          })
+        }
+      </ul>
+    </details>
+  </div>
+  <!-- </p> -->
+  <div id="bottom" class="self-center py-3">
+    {
+      regLink ? (
+        <a
+          target="_blank"
+          href={regLink}
+          class="relative self-center bg-slate-600 text-white font-black px-2 py-1 rounded"
+        >
+          REGISTER
+        </a>
+      ) : (
+        <a
+          target="_blank"
+          href={regLink}
+          class="relative self-center bg-slate-300 text-white font-black px-7 py-1 rounded pointer-events-none"
+        >
+          N/A
+        </a>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    backdrop-filter: blur(5px);
+  }
+</style>

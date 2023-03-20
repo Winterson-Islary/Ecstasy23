@@ -1,0 +1,143 @@
+---
+import NonHomeLayout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+---
+
+<NonHomeLayout>
+  <div id="background-img" class="-z-30"></div>
+  <div
+    id="wrapper"
+    class="w-full mx-auto md:max-w-[1300px] mt-16 md:mt-[5em] px-2 md:px-10 sm:pb-10"
+  >
+    <h1 class="text-5xl font-black font-playfair text-center text-black">
+      Explore The Events
+    </h1>
+
+    <main class="mt-20">
+      <div
+        id="event-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pb-10"
+      >
+        <!-- Cultural Rally -->
+        <Card
+          eventNo="10"
+          title="Cultural Rally"
+          date="22/03/23"
+          venue="CITK Bus Stand"
+          time="9:00AM"
+        />
+
+        <!-- Variety Show -->
+        <Card
+          eventNo="2"
+          title="Variety Show"
+          date="17/03/23"
+          venue="Recreation Center"
+          time="N/A"
+          regLink="https://forms.gle/GCfVXa2i9Q5MUmdt8"
+        />
+
+        <!-- Drama Play -->
+        <Card
+          eventNo="3"
+          title="Drama Play"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+        />
+
+        <!-- Bihu Performance -->
+        <Card
+          eventNo="4"
+          title="Bihu Performance"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+        />
+
+        <!-- Flash Mob -->
+        <Card
+          eventNo="5"
+          title="Flash Mob"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+        />
+
+        <!-- Ramp Walk -->
+        <Card
+          eventNo="6"
+          title="Ramp Walk"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+        />
+
+        <!-- Singing Competition -->
+        <Card
+          eventNo="7"
+          title="Singing Competition"
+          date="17/03/23"
+          venue="Recreation Center"
+          time="N/A"
+          regLink="https://forms.gle/yndqRW7atZT13cL8A"
+        />
+
+        <!-- Dance Competition -->
+        <Card
+          eventNo="8"
+          title="Dance Competition"
+          date="22/03/23"
+          venue="N/A"
+          time="N/A"
+          regLink="https://forms.gle/qGHhQSpY8cujGWKB6"
+        />
+
+        <!-- Acting Competition -->
+        <Card
+          eventNo="9"
+          title="Acting Competition"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+        />
+
+        <!-- KTM onTrack -->
+        <Card
+          eventNo="10"
+          title="KTM onTrack"
+          date="24/03/23"
+          venue="CIT Campus"
+          time="10:00AM - 04:00PM"
+          regLink="https://forms.gle/g4ZW8S55qGLNsd5u5"
+        />
+
+        <!-- Concert -->
+        <Card
+          eventNo="11"
+          title="Concert"
+          date="24/03/23"
+          venue="CIT Campus"
+          time="9:00PM"
+        />
+      </div>
+    </main>
+  </div>
+</NonHomeLayout>
+
+<style>
+  #background-img {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/ecstasy.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    filter: grayscale(30%);
+    filter: brightness(100%);
+  }
+</style>

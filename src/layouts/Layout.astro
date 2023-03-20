@@ -1,0 +1,80 @@
+---
+import Hamburger from "../components/Hamburger.astro";
+import NavLinks from "../components/NavLinks.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo4.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ecstasy23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      id="nav-container"
+      class="sm:rounded-xl max-w-[600px] md:max-w-[1300px] mx-auto flex justify-between items-center p-3 md:p-10 relative z-20 shadow-black shadow-sm"
+    >
+      <a href="/" class="text-3xl font-playfair text-black font-black">
+        <img
+          id="logo"
+          src="/assets/logo/logo3.webp"
+          alt="logo"
+          class="h-[12vh] p-2"
+        />
+      </a>
+      <Hamburger />
+      <NavLinks />
+    </header>
+    <slot />
+
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+      color-scheme: only light;
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background-bolor: white;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  /* #logo{
+		height: 3.3em;
+		width: 5.7em;
+	} */
+  header {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    height: 12vh;
+    /* background-image: url("/assets/neon.webp"); */
+    background-color: ;
+    backdrop-filter: blur(5px);
+    border: 2px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+</style>

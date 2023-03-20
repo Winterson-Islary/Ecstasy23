@@ -1,0 +1,401 @@
+---
+import Carousel from "../components/Carousel.astro";
+import Layout from "../layouts/Layout.astro";
+import Members from "../components/Members.astro";
+---
+
+<Layout>
+  <div
+    id="background-vid"
+    class="h-[100vh] absolute w-[100vw] -z-10 top-0 bg-white"
+  >
+    <!-- <img
+      src="/assets/ecstasy.webp"
+      alt="ecstasy hero section"
+      class="brightness-[90%] h-[100%] w-[100%]"
+    /> -->
+  </div>
+  <!--HERO SECTION -->
+  <div id="wrapper" class="relative h-[100vh] md:py-[10em]">
+    <div id="background-img" class="-z-30"></div>
+    <main
+      id="primary-content"
+      class="mx-auto w-full md:max-w-[1300px] relative z-19 mt-30 md:mt-0 px-2 md:px-10"
+    >
+      <div
+        id="left-col"
+        class="w-full flex flex-col justify-center pt-[13em] md:pt-[2em]"
+      >
+        <section id="hero" class="self-center">
+          <h1
+            class="text-black uppercase text-center font-black text-5xl lg:text-9xl mb-2 font-sans"
+          >
+            ECSTASY23
+          </h1>
+          <p
+            class="text-3xl uppercase py-2 text-center text-black font-serif mb-4 font-black bg-white bg-opacity-70 rounded-full"
+          >
+            COME GET LOST IN THE MADNESS!
+          </p>
+        </section>
+        <p
+          class="w-full border-t-2 border-b-2 border-black px-6 py-3 font-poppins font-medium lg:w-[50%] border-l-4 border-r-4 text-center text-black text-[0.9rem] md:text-[1.1rem] self-center rounded-xl bg-white bg-opacity-80"
+        >
+          Get ready for <strong>Ecstasy 2023</strong> - a cultural fest with trending
+          activities, amazing performances and a vibe that rocks! Don't miss out
+          on the good times.
+        </p>
+      </div>
+    </main>
+  </div>
+  <!--END-->
+
+  <!-- <section class="flex item-center justify-center">
+        <div id="margin" class="border-2 border-slate-100 w-[100%] md:w-[100%] rounded-full"></div>
+    </section> -->
+
+  <!--EVENT CARD SECTION -->
+  <div
+    id="explore-container"
+    class="lg:py-0 relative overflow-clip border-black border-t-4 border-b-2"
+  >
+    <img
+      id="flower"
+      src="/assets/image1.webp"
+      alt="flower"
+      class="h-[30.5em] absolute -right-[15em] -top-2 -z-30"
+    />
+    <img
+      id="flower"
+      src="/assets/image1.webp"
+      alt="flower"
+      class="h-[30.5em] absolute -z-30 -left-[15em] -top-2"
+    />
+    <div id="explore-mobile-header" class="pt-5">
+      <h1
+        class="font-playfair text-center lg:hidden text-black font-light text-6xl z-20"
+      >
+        <span class="bg-white bg-opacity-60 px-4 rounded-full">EXPLORE!!</span>
+      </h1>
+    </div>
+    <div
+      id="block-continer"
+      class="px-2 md:px-5 h-[50vh] mx-auto flex flex-col justify-center gap-[2em] items-center"
+    >
+      <section class="self-center hidden lg:flex lg:flex-col z-30">
+        <h1 class="font-playfair text-black font-light text-7xl self-center">
+          EXPLORE!!
+        </h1>
+        <p class="text-2xl font-light font-poppins self-center">
+          PARTICIPATE IN VARIOUS
+        </p>
+        <p class="text-xl font-light font-poppins pb-2 self-center">
+          CONTESTS AND EVENTS.
+        </p>
+        <a
+          href="./about"
+          class="bg-red-300 shadow-black shadow-sm hover:shadow-sm border-black border-2 transition-shadow px-10 py-1 font-black font-playfair rounded-full text-2xl self-center"
+          >INFO.</a
+        >
+      </section>
+      <section
+        id="right-col"
+        class="flex grow-0 flex-col justify-center lg:grid lg:grid-cols-3 gap-[0.3em] lg:gap-1 lg:border-black lg:border-4 rounded-lg p-1 w-full sm:w-[65%]"
+      >
+        <div
+          class="link-card card1 items-end font-poppins text-[0.9rem] rounded-md sm:rounded-none"
+        >
+          <a href="./events">
+            <h2>
+              <strong>CULTURAL EVENTS</strong>
+              <span>&rarr;</span>
+            </h2>
+            <p>Explore Cultural Events!</p>
+          </a>
+        </div>
+        <div
+          class="link-card card2 h-auto items-end font-poppins text-[0.9rem] rounded-md sm:rounded-none"
+        >
+          <a href="./contests">
+            <h2>
+              <strong>CONTESTS</strong>
+              <span>&rarr;</span>
+            </h2>
+            <p>Explore Various Contests!</p>
+          </a>
+        </div>
+        <div
+          class="link-card card3 h-auto items-end overflow-hidden font-poppins text-[0.9rem] rounded-md sm:rounded-none"
+        >
+          <a href="./sports" class="">
+            <h2>
+              <strong>SPORTS EVENTS</strong>
+              <span>&rarr;</span>
+            </h2>
+            <p>Participate in Sports Events!</p>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!--END -->
+  <!-- <section class="flex item-center justify-center">
+        <div id="margin" class="border-2 border-slate-100 w-[100%] md:w-[100%] rounded-full"></div>
+    </section> -->
+
+  <!--MERCH SECTION -->
+  <div id="merch-container" class="py-5 bg-[#191919] text-white">
+    <h1 class="text-center text-4xl pb-5 font-poppins font-black px-5">
+      GRAB MERCH!!
+    </h1>
+    <section
+      id="merch-div"
+      class="hidden sm:flex flex-wrap justify-center items-center gap-2"
+    >
+      <img
+        src="/assets/merch/shirt1.webp"
+        alt="T-Shirt"
+        class="h-[15em] rounded-md"
+      />
+      <img
+        src="/assets/merch/shirt2.webp"
+        alt="T-Shirt"
+        class="h-[15em] rounded-md"
+      />
+      <img
+        src="/assets/merch/shirt3.webp"
+        alt="T-Shirt"
+        class="h-[15em] rounded-md"
+      />
+    </section>
+    <section class="sm:hidden">
+      <Carousel />
+    </section>
+    <h1 class="text-center text-l font-poppins font-bold pt-5 text-slate-400">
+      CONTACT: 9954897236
+    </h1>
+    <h1 class="text-center text-sm font-poppins font-bold text-slate-500">
+      IGNATIUS BASUMATARY
+    </h1>
+  </div>
+  <!--END -->
+
+  <section class="flex item-center justify-center">
+    <div
+      id="margin"
+      class="border-2 border-slate-100 w-[100%] md:w-[100%] rounded-full"
+    >
+    </div>
+  </section>
+
+  <!--QUOTE -->
+  <div
+    id="quote"
+    class="z-20 min-h-[15em] mx-auto p-5 md:p-10 select-none pointer-events-none mb-[5em]"
+  >
+    <h2
+      class="text-gray-800 mb-4 text-center pt-10 pb-10 font-poppins text-4xl font-light"
+    >
+      MESSAGE FROM DIRECTOR
+    </h2>
+    <section
+      class="flex flex-col md:flex-row justify-center gap-10 items-center"
+    >
+      <section id="left-body" class="">
+        <img
+          src="/assets/board/director-image.webp"
+          alt="organizer's image"
+          class="rounded-full md:rounded-full w-[10em] md:w-[13em] pointer-events-none border-2 border-white"
+        />
+      </section>
+      <section id="right-body" class="w-full lg:w-[50em]">
+        <p class="font-playfair italic font-light text-[1.2rem]">
+          <blockquote
+            class="text-black text-[1rem] italic border-l-4 pl-4 border-gray-300"
+          >
+            <p class="mb-4">
+              "Welcome to Central Institute of Technology Kokrajhar, an
+              institute dedicated to providing quality education in engineering,
+              technology, and vocational training. Our focus is on developing a
+              research and development culture that leads to more industry
+              partnerships, innovation, and entrepreneurship. We are committed
+              to implementing the new education policy (NEP2020) and building a
+              network of excellence with knowledge advancing partners to
+              contribute to the progress of the region and the nation. Join us
+              in pursuing your objectives of life and creating an intellectual
+              society focused on socio-economic growth."
+            </p>
+            <cite
+              >- Prof. Hemanta Kumar Kalita
+              <p class="text-gray-500">Director (i/c), CIT Kokrajhar</p>
+            </cite>
+          </blockquote>
+        </p>
+      </section>
+    </section>
+  </div>
+  <!--END -->
+
+  <section id="margin" class="flex item-center justify-center">
+    <div class="border-2 border-slate-100 w-[100%] md:w-[80%] rounded-full">
+    </div>
+  </section>
+
+  <!--COMMITTEE SECTION-->
+  <section class="py-16 flex items-center justify-center">
+    <Members />
+  </section>
+  <!--END -->
+
+  <section class="flex item-center justify-center">
+    <div
+      id="margin"
+      class="border-2 border-slate-100 w-[100%] md:w-[80%] rounded-full"
+    >
+    </div>
+  </section>
+
+  <!--SPONSORS -->
+  <div id="secondary-content" class="py-16 z-20 bg-white">
+    <section id="sponsor-container" class="">
+      <h1 class="text-center font-poppins text-4xl font-black pb-10 md:pb-16">
+        SPONSORS
+      </h1>
+      <div
+        id="sponsor-logo"
+        class="flex flex-wrap items-center justify-center gap-10 lg:gap-20 pointer-events-none px-2"
+      >
+        <img
+          src="/assets/sponsors/king-biryani-edited.webp"
+          alt="King Biryani"
+          class="h-32 w-32"
+        />
+        <img
+          src="/assets/sponsors/samadhan.webp"
+          alt="SOFTWARE SAMADHAN"
+          class="h-32 w-32"
+        />
+        <img src="/assets/sponsors/sponsor2.webp" alt="KTM" class="h-32 w-32" />
+        <img src="/assets/sponsors/ubore.png" alt="URBORE" class="h-32 w-32" />
+        <img
+          src="/assets/sponsors/swaglok.webp"
+          alt="Swaglok Merchandise Partner"
+          class="h-32 w-32"
+        />
+      </div>
+    </section>
+  </div>
+  <!--END -->
+</Layout>
+
+<style>
+  body {
+    overflow-x: hidden;
+  }
+  #sponsor-logo img {
+    aspect-ratio: 2/2;
+    object-fit: contain;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 2px solid black;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+
+  .card1 {
+    background-image: url("/assets/party.webp");
+    background-position: center;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    filter: grayscale(10%);
+  }
+  .card2 {
+    background-image: url("/assets/contest.webp");
+    background-position: center;
+    background-size: 200%;
+    filter: grayscale(10%);
+  }
+  .card3 {
+    background-image: url("/assets/football.webp");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(10%);
+  }
+
+  /*PreDefined */
+  .link-card {
+    list-style: none;
+    display: flex;
+    padding: 0.25rem;
+    object-fit: contain;
+    background-color: white;
+    border: 2px solid black;
+    /* border-radius: 0.6rem; */
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: background-size 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+  .link-card > a {
+    width: 100%;
+    border: 2px solid black;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: 1rem 1.3rem;
+    border-radius: 0.35rem;
+    color: #111;
+    background-color: white;
+    opacity: 0.95;
+  }
+  .link-card > h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-card > p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: #444;
+  }
+  .link-card:is(:hover, :focus-within) {
+    /* background-position: 0%; */
+    background-size: 150%;
+  }
+  .link-card:is(:hover, :focus-within) h2 {
+    color: #3b82f6;
+  }
+
+  #explore-container {
+    background-color: #fff5fd;
+    filter: grayscale(0%);
+  }
+  #background-vid {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    background-image: url("/assets/ecstasy2.webp");
+    background-position: center;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-left: 50%;
+    transform: translate(-50%,-50%); */
+  }
+  #flower {
+    /*NOT SUPPORTED BY FIREFOX */
+    -webkit-box-reflect: below;
+  }
+</style>

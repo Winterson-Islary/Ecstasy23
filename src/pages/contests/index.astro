@@ -1,0 +1,153 @@
+---
+import NonHomeLayout from "../../layouts/Layout.astro";
+import ContestCard from "../../components/ContestCard.astro";
+---
+
+<NonHomeLayout>
+  <div id="background-img" class="-z-30"></div>
+  <div
+    id="wrapper"
+    class="w-full mx-auto md:max-w-[1300px] mt-16 md:mt-[5em] px-2 md:px-10 sm:pb-10"
+  >
+    <h1 class="text-5xl font-playfair font-black text-center text-black">
+      Explore The Contests
+    </h1>
+
+    <main class="mt-20">
+      <div
+        id="contest-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pb-10 place-items-start"
+      >
+        <ContestCard
+          contestNo="1"
+          title="Quiz"
+          date="22/03/23"
+          venue="N/A"
+          time="10:30am-12:30pm"
+          coordinators={[
+            "Rajarshi Seal",
+            "Sheik Mariam Rukhser",
+            "Pritam Raj Neog",
+          ]}
+          regLink=""
+        />
+        <ContestCard
+          contestNo="2"
+          title="Debate"
+          date="22/03/23"
+          venue="Virtual Classroom"
+          time="12:30pm-2:00pm"
+          coordinators={["Manash Pratim Borah", "Parmita Saikia"]}
+          regLink="https://forms.gle/egY85UNuz8XGDRYY6"
+        />
+        <ContestCard
+          contestNo="3"
+          title="Storytelling"
+          date="23/03/23"
+          venue="N/A"
+          time="1:30pm-3:00pm"
+          coordinators={["Mayank Katyayan", "Tina Kakati"]}
+        />
+        <ContestCard
+          contestNo="4"
+          title="Essay Writing"
+          date="23/03/23"
+          venue="N/A"
+          time="10:30am-11:30am"
+          coordinators={["Sourav Malakar", "Nisha Saikia"]}
+          regLink="https://docs.google.com/forms/d/e/1FAIpQLSct2DnggnW6o5gjeITLMh_WEqXsNGVTj22EYQP7w7kDStfioA/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"
+        />
+        <ContestCard
+          contestNo="5"
+          title="Poem Recitation"
+          date="22/03/23"
+          venue="Virtual Classroom"
+          time="2:00pm-3:00pm"
+          coordinators={["Jagriti Shivam", "Ignatius Basumatary"]}
+          regLink="https://docs.google.com/forms/d/e/1FAIpQLSeZAGVrxsTjEnyOLZcxfGZqgFHXLnHMgyiDLriNjkGOeXaMeg/viewform?usp=sf_link"
+        />
+        <ContestCard
+          contestNo="6"
+          title="JAM Session"
+          date="22/03/23"
+          venue="N/A"
+          time="3:00pm-4:00pm"
+          coordinators={["Krishna Sharma", "Jesika Basumatary"]}
+        />
+        <ContestCard
+          contestNo="7"
+          title="Treasure Hunt"
+          date="24/03/23"
+          time="10:30am-1:30pm"
+          venue="Hawa Mahal"
+          coordinators={[
+            "Rahul Dubey",
+            "Jyotishman Das",
+            "Nilam Jyoti Sharma",
+            "Barasha Rani Das",
+          ]}
+          regLink="https://docs.google.com/forms/d/e/1FAIpQLSfExr2tLQnDvGyggDztgflag-jIDHF2xjyqJdVZ6ElNtcBNNw/viewform"
+        />
+        <ContestCard
+          contestNo="8"
+          title="Art Competition"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+          coordinators={["Meghna Roy"]}
+        />
+        <ContestCard
+          contestNo="9"
+          title="Photography"
+          date="22/03/23"
+          venue="CIT Campus"
+          time="1:00pm-2:30pm"
+          coordinators={["Sanjiv Malakar", "Priya Dutta"]}
+          regLink="https://forms.gle/GhWLFFV9dYmghcP29"
+        />
+        <ContestCard
+          contestNo="10"
+          title="Chai pe charcha (Group Discussion)"
+          date="23/03/23"
+          venue="N/A"
+          time="12:00pm-1:30pm"
+          coordinators={["Asif Ikbal Hussain", "Jinti Kakati"]}
+          regLink="https://docs.google.com/forms/d/e/1FAIpQLSddGaNHn8PhAsgz5AiN-eNhcg1_rTnBtcWKE2k91AgGH6mwGg/viewform?vc=0&c=0&w=1&flr=0"
+        />
+        <ContestCard
+          contestNo="11"
+          title="Rangoli Competition"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+          coordinators={[]}
+        />
+        <ContestCard
+          contestNo="12"
+          title="Salad Competition"
+          date="12/03/23"
+          venue="N/A"
+          time="N/A"
+          coordinators={[]}
+        />
+      </div>
+    </main>
+  </div>
+</NonHomeLayout>
+
+<style>
+  #background-img {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/ecstasy.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    filter: grayscale(30%);
+    filter: brightness(100%);
+  }
+</style>

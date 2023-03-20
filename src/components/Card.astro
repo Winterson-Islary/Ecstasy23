@@ -1,0 +1,60 @@
+---
+export interface Props {
+  eventNo: string;
+  title: string;
+  date: string;
+  venue: string;
+  regLink?: string;
+  time?: string;
+}
+
+const { eventNo, title, date, venue, regLink = null, time } = Astro.props;
+---
+
+<section
+  id={eventNo}
+  class="font-poppins border-black border-t-2 border-b-2 px-3 py-2 text-black flex flex-col"
+>
+  <div id="top">
+    <p class="text-center pb-2"><strong>EVENT {eventNo}</strong></p>
+    <h1 id="title" title={title} class="truncate">
+      <span class="text-slate-900">Title:</span>
+      <span class="font-black">{title}</span>
+    </h1>
+    <p id="date"><span class="text-slate-900">Date:</span> {date}</p>
+    <p id="venue" title={venue} class="truncate">
+      <span class="text-slate-900">Venue:</span>
+      {venue}
+    </p>
+    <p id="time" title={time} class="truncate">
+      <span class="text-slate-900">Time:</span>
+      {time}
+    </p>
+  </div>
+  <div id="bottom" class="self-center py-3">
+    {
+      regLink ? (
+        <a
+          target="_blank"
+          href={regLink}
+          class="relative self-center bg-slate-600 text-white font-black px-2 py-1 rounded"
+        >
+          REGISTER
+        </a>
+      ) : (
+        <a
+          target="_blank"
+          href={regLink}
+          class="relative self-center bg-slate-300 text-white font-black px-7 py-1 rounded pointer-events-none"
+        >
+          N/A
+        </a>
+      )
+    }
+  </div>
+</section>
+<style>
+  section {
+    backdrop-filter: blur(5px);
+  }
+</style>
