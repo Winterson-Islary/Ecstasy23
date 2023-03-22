@@ -23,7 +23,8 @@ import Members from "../components/Members.astro";
       >
         <section id="hero" class="self-center">
           <h1
-            class="text-black uppercase text-center font-black text-6xl lg:text-9xl mb-2 font-sans"
+            id="hero-h1"
+            class="text-black uppercase text-center font-black text-[3.5rem] lg:text-9xl mb-2 font-sans"
           >
             ECSTASY23
           </h1>
@@ -457,5 +458,8 @@ import Members from "../components/Members.astro";
     /*NOT SUPPORTED BY FIREFOX */
     -webkit-box-reflect: below;
     filter: grayscale(0%);
+  }
+  #hero-h1 {
+    -webkit-text-stroke: 2px white;
   }
 </style>
