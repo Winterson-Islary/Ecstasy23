@@ -11,7 +11,7 @@ import Members from "../components/Members.astro";
   >
   </div>
   <!--HERO SECTION -->
-  <div id="wrapper" class="relative h-[100vh] md:py-[10em]">
+  <div id="wrapper" class="relative h-[85vh] sm:h-[100vh] md:py-[10em]">
     <div id="background-img" class="-z-30"></div>
     <main
       id="primary-content"
@@ -35,12 +35,27 @@ import Members from "../components/Members.astro";
           </p>
         </section>
         <p
-          class="w-full border-t-2 border-b-2 border-black px-6 py-3 font-poppins font-medium lg:w-[50%] border-l-4 border-r-4 text-center text-black text-[0.9rem] md:text-[1.1rem] self-center rounded-xl bg-white bg-opacity-80"
+          class="w-full border-t-2 border-b-2 border-black px-6 py-3 font-poppins font-medium lg:w-[50%] border-l-4 border-r-4 text-center text-black text-[0.9rem] md:text-[1.1rem] self-center rounded-xl bg-white bg-opacity-90"
         >
           Get ready for <strong>Ecstasy 2023</strong> - a cultural fest with trending
           activities, amazing performances and a vibe that rocks! Don't miss out
           on the good times.
         </p>
+        <div class="self-center pt-10">
+          <a
+            id="download_schedule"
+            href="/assets/docs/schedule.pdf"
+            download="ecstasy-tentative-schedule"
+            class="bg-green-200 text-xl rounded-full px-2 py-1 font-poppins border-black border-2 transition-shadow hover:shadow-sm shadow-md shadow-black font-bold"
+            >SCHEDULE <span>
+              <img
+                src="/assets/download.png"
+                alt="download-button"
+                class="h-[1.7rem] inline-block"
+              />
+            </span>
+          </a>
+        </div>
       </div>
     </main>
   </div>
@@ -92,7 +107,7 @@ import Members from "../components/Members.astro";
         </p>
         <a
           href="./about"
-          class="bg-red-300 shadow-black shadow-sm hover:shadow-sm border-black border-2 transition-shadow px-10 py-1 font-black font-playfair rounded-full text-2xl self-center"
+          class="bg-red-300 shadow-black shadow-md hover:shadow-sm border-black border-2 transition-shadow px-10 py-1 font-black font-playfair rounded-full text-2xl self-center"
           >Learn More.</a
         >
       </section>
